@@ -33,3 +33,40 @@ body {
     text-align: justify;
     text-justify: inter-word;
 }
+
+/* Launches Page */
+.launchesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.launchesGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lgCard {
+    margin: 2% 2% !important;
+    justify-content: center;
+    align-items: center;
+}
+.launchesCard{
+    background: linear-gradient(45deg, #e2e3eead 30%, #798a6f8a 90%);
+}
+
+.lgSucceeded {
+    border-bottom: 10px solid rgb(32, 180, 32);
+}
+.lgFailed {
+    border-bottom: 10px solid rgb(192, 37, 37);
+}
+.lgUpComming {
+    border-bottom: 10px solid rgb(28, 48, 138);
+}
+.launchesImage{
+    width: 100%;
+    align-self: center;
+    border-radius: 20px;
+}

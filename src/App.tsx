@@ -4,6 +4,7 @@ import React from 'react';
 // Component Imports
 import Header from './components/header/Header';
 import { Home } from './components/home/Home';
+import { Launches } from './components/launches/Launches';
 import Footer from './components/footer/Footer';
 // Styles Imports
 import './App.css';
@@ -13,6 +14,7 @@ function App() {
     <div>
       <Header/>
       <Home/>
+      <Launches/>
       <Footer/>
     </div>
   );
