@@ -8,6 +8,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+// Routers Imports
+import { Link } from 'react-router-dom';
 // Images Imports
 import logo from '../../asserts/images/logo.png';
 
@@ -74,33 +76,43 @@ export default function Header() {
                     <Grid container spacing={2}>
                         {/* App Logo */}
                         <Grid item xs={2}>
-                            <IconButton
-                                edge="start"
-                                aria-label="SpaceX">
-                                <img src={logo} alt="logo" />
-                            </IconButton>
+                            <Link to="/" className="">
+                                <IconButton
+                                    edge="start"
+                                    aria-label="SpaceX">
+                                    <img src={logo} alt="logo" />
+                                </IconButton>
+                            </Link>
                         </Grid>
                         {/* Menu Entries */}
                         <Grid item xs={7} className={classes.headerMenu}>
                             <Grid item xs={3}>
-                                <Typography variant="h6" className={classes.headerMenuElement}>
-                                    Launches
-                                </Typography>
+                                <Link to="/launches" className="link">
+                                    <Typography variant="h6" className={classes.headerMenuElement}>
+                                        Launches
+                                    </Typography>
+                                </Link>
                             </Grid>
                             <Grid item xs={3}>
-                                <Typography variant="h6" className={classes.headerMenuElement}>
-                                    Succeeded
-                                </Typography>
+                                <Link to="/launches/succeeded" className="link">
+                                    <Typography variant="h6" className={classes.headerMenuElement}>
+                                        Succeeded
+                                    </Typography>
+                                </Link>
                             </Grid>
                             <Grid item xs={3}>
-                                <Typography variant="h6" className={classes.headerMenuElement}>
-                                    Failed
-                                </Typography>
+                                <Link to="/launches/failed" className="link">
+                                    <Typography variant="h6" className={classes.headerMenuElement}>
+                                        Failed
+                                    </Typography>
+                                </Link>
                             </Grid>
                             <Grid item xs={3}>
-                                <Typography variant="h6" className={classes.headerMenuElement}>
-                                    Up-Comming
-                                </Typography>
+                                <Link to="/launches/upcomming" className="link">
+                                    <Typography variant="h6" className={classes.headerMenuElement}>
+                                        Up-Comming
+                                    </Typography>
+                                </Link>
                             </Grid>
                         </Grid>
                         {/* Menu Bar */}
@@ -121,10 +133,11 @@ export default function Header() {
                                 onClose={handleClose}
                                 classes={{ paper: classes.headerMenuPaper }}
                             >
-                                <MenuItem onClick={handleClose} className={classes.headerMenuList}>Launches</MenuItem>
-                                <MenuItem onClick={handleClose} className={classes.headerMenuList}>Succeeded</MenuItem>
-                                <MenuItem onClick={handleClose} className={classes.headerMenuList}>Failed</MenuItem>
-                                <MenuItem onClick={handleClose} className={classes.headerMenuList}>Up-Comming</MenuItem>
+                                <MenuItem onClick={handleClose} className={classes.headerMenuList}><Link to="/" className="link">Home</Link></MenuItem>
+                                <MenuItem onClick={handleClose} className={classes.headerMenuList}><Link to="/launches" className="link">Launches</Link></MenuItem>
+                                <MenuItem onClick={handleClose} className={classes.headerMenuList}><Link to="/launches/succeeded" className="link">Succeeded</Link></MenuItem>
+                                <MenuItem onClick={handleClose} className={classes.headerMenuList}><Link to="/launches/failed" className="link">Failed</Link></MenuItem>
+                                <MenuItem onClick={handleClose} className={classes.headerMenuList}><Link to="/launches/upcomming" className="link">Up-Comming</Link></MenuItem>
                             </Menu>
                         </Grid>
                     </Grid>

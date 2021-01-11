@@ -4,6 +4,8 @@ import React from 'react'
 // Material Ui Imports
 import { Button, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+// Routers Imports
+import { Link } from 'react-router-dom';
 // Images Imports
 import home from '../../asserts/images/home.png';
 
@@ -47,12 +49,14 @@ export const Home = () => {
                             <Typography variant= "h6" gutterBottom className="homeDetail" >
                                 SpaceX is an American aerospace manufacturer and space transportation services company. It was founded to reduce space transportation costs for colonization of Mars.
                             </Typography>
-                            <Button
-                                variant="contained"
-                                className={classes.launchesButton}
-                            >
-                                Launches
-                            </Button>
+                            <Link to="launches" className=" buttonLink">
+                                <Button
+                                    variant="contained"
+                                    className={classes.launchesButton}
+                                >
+                                    Launches
+                                </Button>
+                            </Link>
                         </CardContent>
                     </Grid>
             </Grid>

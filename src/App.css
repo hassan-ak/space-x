@@ -225,3 +225,16 @@ td{
         margin-top: 100px;
     }
 }
+
+/* Links */
+.link{
+    color: white;
+    text-decoration: none;
+}
+.buttonLink{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+} 
