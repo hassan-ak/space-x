@@ -9,6 +9,8 @@ import noImage from '../../asserts/images/noImage.png';
 import { Card } from '@material-ui/core';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
+// Routers Imports
+import { useParams } from 'react-router-dom';
 // Graph QL Imports
 import { useLaunchInfoQuery } from '../../generated/graphql';
 
@@ -35,10 +37,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const Launch = () => {
+    // using link slug
+    const { slug } = useParams();
+    console.log(slug)
     // Use Styles
     const classes = useStyles();
     // GraphQL Request
-    const { data, error, loading } = useLaunchInfoQuery({ variables: { id: `79` } });
+    const { data, error, loading } = useLaunchInfoQuery({ variables: { id: `${slug}` } });
     // Data Laoding
     if (loading) {
         return (<div className="launchPage">

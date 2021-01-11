@@ -5,6 +5,8 @@ import React from 'react';
 import { Button, Card, CardContent, Grid, Typography } from '@material-ui/core';
 // Graph QL Imports
 import { useLaunchesQuery } from '../../generated/graphql';
+// Routers Imports
+import { Link } from 'react-router-dom';
 // Images Imports
 import noImage from '../../asserts/images/noImage.png';
 
@@ -58,12 +60,14 @@ export const Succeeded = () => {
                                             Flight No. : {launch.flight_number}
                                         </Typography>
                                     </div>
-                                    <Button
-                                        variant="contained"
-                                        className="detailsButton"
-                                    >
-                                        Details
-                                    </Button>
+                                    <Link to={`/launches/succeeded/${launch?.flight_number}`} className=" buttonLink">
+                                        <Button
+                                            variant="contained"
+                                            className="detailsButton"
+                                        >
+                                            Details
+                                        </Button>
+                                    </Link>
                                 </CardContent>
                             </Grid>
                         )
