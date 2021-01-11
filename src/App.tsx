@@ -9,6 +9,7 @@ import { Succeeded } from './components/succeeded/Succeeded';
 import { ErrorPage } from './components/errorPage/ErrorPage';
 import { Failed } from './components/failed/Failed';
 import { UpComming } from './components/upcomming/UpComming';
+import { Launch } from './components/launch/Launch';
 import Footer from './components/footer/Footer';
 // Styles Imports
 import './App.css';
@@ -22,6 +23,7 @@ function App() {
       <Succeeded/>
       <Failed/>
       <UpComming/>
+      <Launch/>
       <ErrorPage/>
       <Footer/>
     </div>

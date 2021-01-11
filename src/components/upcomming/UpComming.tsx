@@ -44,7 +44,6 @@ export const UpComming = () => {
                     {!!data.launches && data.launches.map(
                         (launch, i) => !!launch && !launch.upcoming === false && (
                             <Grid key={i} item xs={10} md={6} component={Card} className="lgCard">
-                                {console.log(launch)}
                                 <CardContent className="slCard">
                                     <Typography variant="h6" className="slCardText" align="center" gutterBottom >
                                         {launch.mission_name}

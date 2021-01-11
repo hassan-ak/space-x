@@ -170,3 +170,58 @@ h3{
     flex-direction: column;
     width: 100%;
 }
+
+/* Launch Page */
+.launchPage{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 98%;
+    color: white;
+}
+.launchLogo{
+    height: 150px;
+    width: 150px;
+}
+.tableDiv{
+    border: 3px solid white;
+}
+th, td{
+    border: 1px solid white;
+}
+td{
+    padding: 10px;
+}
+.green{
+    color: rgb(32, 180, 32);
+}
+.red{
+    color: rgb(192, 37, 37);
+}
+.yellow{
+    color: rgb(28, 48, 138);
+}
+.productsGridContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.productsGrid {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 0pt;
+}
+@media(max-width: 960px){
+    .productsContainer{
+        margin-top: 100px;
+    }
+}
+@media(max-width: 960px){
+    .productsContainer{
+        margin-top: 100px;
+    }
+}
